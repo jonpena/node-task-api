@@ -1,9 +1,9 @@
-import { Response } from 'express';
+import { Response } from "express";
 
-const handleHttp = (res: Response, err: string, errowRaw?: any) => {
-	console.log(errowRaw);
-	res.status(res.statusCode);
-	res.send({ err });
+const handleHttp = (customError: string, res: Response, error?: unknown) => {
+  console.log(error);
+  res.status(400);
+  res.send({ customError, error });
 };
 
 export { handleHttp };
