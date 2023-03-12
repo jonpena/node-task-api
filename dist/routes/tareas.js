@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.router = void 0;
+const express_1 = require("express");
+const tarea_controller_1 = require("../controllers/tarea.controller");
+const router = (0, express_1.Router)();
+exports.router = router;
+router.get("/", tarea_controller_1.getTasks);
+router.get("/:id", tarea_controller_1.getTask);
+router.post("/", tarea_controller_1.createTask);
+router.put("/:id", tarea_controller_1.updateTask);
+router.delete("/:id", tarea_controller_1.deleteTask);
