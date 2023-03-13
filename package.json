@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "description": "Api de Tareas",
   "main": "./dist/index.js",
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
     "dev": "nodemon ./src/index.ts",
     "build": "tsc",
     "start": "node ./dist/index.js",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -b deploy -d dist"
   },
   "keywords": [],
   "author": "",
