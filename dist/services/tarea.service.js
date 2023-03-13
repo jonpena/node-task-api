@@ -15,8 +15,26 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports._deleteTask = exports._updateTask = exports.insertTask = exports.allTasks = exports.getOneTask = void 0;
 const tarea_model_1 = __importDefault(require("../models/tarea.model"));
 const allTasks = () => __awaiter(void 0, void 0, void 0, function* () {
-    const responseTasks = yield tarea_model_1.default.find({});
-    return responseTasks;
+    // const responseTasks = await tareaModel.find({});
+    // return responseTasks;
+    return {
+        task1: {
+            id: 1,
+            title: "task 1",
+        },
+        task2: {
+            id: 2,
+            title: "task 2",
+        },
+        task3: {
+            id: 3,
+            title: "task 3",
+        },
+        task4: {
+            id: 4,
+            title: "task 4",
+        },
+    };
 });
 exports.allTasks = allTasks;
 const getOneTask = (_id) => __awaiter(void 0, void 0, void 0, function* () {
