@@ -2,26 +2,8 @@ import { Tarea } from "../interfaces/tarea.interface";
 import tareaModel from "../models/tarea.model";
 
 const allTasks = async () => {
-  // const responseTasks = await tareaModel.find({});
-  // return responseTasks;
-  return {
-    task1: {
-      id: 1,
-      title: "task 1",
-    },
-    task2: {
-      id: 2,
-      title: "task 2",
-    },
-    task3: {
-      id: 3,
-      title: "task 3",
-    },
-    task4: {
-      id: 4,
-      title: "task 4",
-    },
-  };
+  const responseTasks = await tareaModel.find({});
+  return responseTasks;
 };
 
 const getOneTask = async (_id: string) => {
