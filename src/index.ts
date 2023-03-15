@@ -2,16 +2,15 @@ import "dotenv/config";
 import express from "express";
 import cors from "cors";
 import { router } from "./routes/index.routes";
-// import dbConnect from "./config/mongo";
+import dbConnect from "./config/mongo";
 
 const PORT = process.env.PORT || 3001;
-
 const app = express();
 
 app.use(cors());
 app.use(express.json());
 app.use(router);
 
-// dbConnect();
+dbConnect();
 
 app.listen(PORT, () => console.log(`listen on port ${PORT}`));
