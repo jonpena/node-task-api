@@ -24,7 +24,7 @@ const _updateTask = async (_id: string, tarea: Tarea) => {
 };
 
 const _deleteTask = async (_id: string) => {
-  const responseDeleteTask = await tareaModel.remove({ _id });
+  const responseDeleteTask = await tareaModel.deleteOne({ _id });
   return responseDeleteTask;
 };
 

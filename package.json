@@ -1,5 +1,5 @@
 {
-  "name": "api-rest",
+  "name": "api-rest-task",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
@@ -7,7 +7,7 @@
     "dev": "ts-node-dev ./src/index.ts",
     "build": "tsc",
     "start": "node ./dist/index.js",
-    "deploy": "gh-pages -b deploy -d dist"
+    "deploy": "gh-pages -b prod -d dist"
   },
   "keywords": [],
   "author": "",
@@ -18,7 +18,7 @@
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.5.2",
+    "mongoose": "^7.0.2",
     "multer": "^1.4.5-lts.1"
   },
   "devDependencies": {
